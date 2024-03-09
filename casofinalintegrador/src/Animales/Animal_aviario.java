@@ -12,9 +12,9 @@ public class Animal_aviario extends Animal{
         this.alas = alas;
     }
 
-    public Animal_aviario(String e, boolean a, boolean s, boolean c, boolean a){
-        super(especie, alimentacion, salud, comportamiento);
-        this.alas=a;
+    public Animal_aviario(String e, boolean a, boolean s, String c, boolean b){
+        super(e, a, s, c);
+        this.alas = b;
     }
     
 }

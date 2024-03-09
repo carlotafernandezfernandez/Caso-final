@@ -1,7 +1,7 @@
 public class HAviario extends Habitat{
     boolean aire;
 
-    public HAviario(float t, boolean h, boolean l, boolean a){
+    public HAviario(float t, int h, boolean l, boolean a){
         super(t, h, l);
         this.aire = a;
     }

@@ -11,9 +11,9 @@ public class Animal_acuatico extends Animal {
         this.aletas = aletas;
     }
 
-    public Animal_acuatico (String e, boolean a, boolean s, boolean c, boolean a){
+    public Animal_acuatico (String e, boolean a, boolean s, String c, boolean b){
         super(especie, alimentacion, salud, comportamiento);
-        this.aletas=a;
+        this.aletas=b;
         }
     }
     

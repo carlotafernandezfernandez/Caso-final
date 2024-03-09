@@ -1,7 +1,7 @@
 public class HTerrestre extends Habitat {
     boolean tierra;
 
-    public HTerrestre(float t, boolean h, boolean l, boolean tierra) {
+    public HTerrestre(float t, int h, boolean l, boolean tierra) {
         super(t, h, l);
         this.tierra = tierra;
     }

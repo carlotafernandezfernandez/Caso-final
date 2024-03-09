@@ -1,10 +1,10 @@
 public class Habitat {
 
     float temperatura;
-    boolean humedad;
+    int humedad;
     boolean limpieza;
     
-    public Habitat (float t, boolean h, boolean l){
+    public Habitat (float t, int h, boolean l){
         this.temperatura = t;
         this.humedad = h;
         this.limpieza = l;
@@ -18,11 +18,11 @@ public class Habitat {
         this.temperatura = t;
     }
 
-    public boolean isHumedad() {
+    public int getHumedad() {
         return this.humedad;
     }
 
-    public void setHumedad(boolean h) {
+    public void setHumedad(int h) {
         this.humedad = h;
     }
 

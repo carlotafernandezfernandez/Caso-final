@@ -1,7 +1,7 @@
 public class HAcuatico extends Habitat{
     boolean agua;
 
-    public HAcuatico(float t, boolean h, boolean l, boolean a){
+    public HAcuatico(float t, int h, boolean l, boolean a){
         super(t, h, l);
         this.agua = a;
     }

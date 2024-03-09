@@ -9,9 +9,8 @@ public class Animal_terrestre extends Animal {
         this.patas = patas;
     }
 
-    public Animal_terrestre(String e, boolean a, boolean s, boolean c, boolean p){
+    public Animal_terrestre(String e, boolean a, boolean s, String c, boolean p){
         super(e, a, s, c);
         this.patas=p;
-        buenaSalud(s);
     }
 }
