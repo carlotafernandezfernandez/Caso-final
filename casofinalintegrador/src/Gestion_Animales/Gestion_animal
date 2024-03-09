@@ -1,0 +1,13 @@
+import Visitantes.*;
+import Animales.*;
+import Habitats.*;
+
+public class Gestion_animal {
+
+    public static String gestionAlimentacion (Animal a, String alimento){
+        System.out.println("De que se alimenta el animal?");
+        a.setAlimentacion(alimento);
+
+    }
+
+}

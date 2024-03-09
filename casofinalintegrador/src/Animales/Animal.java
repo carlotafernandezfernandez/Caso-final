@@ -1,5 +1,3 @@
-package Animales;
-
 public class animal {
     String especie;
     String alimentacion;
