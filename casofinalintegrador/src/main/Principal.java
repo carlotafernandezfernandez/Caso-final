@@ -2,6 +2,7 @@ import Visitantes.*;
 import Animales.*;
 import Habitats.*;
 import java.util.*;
+import Inventario.*;
 
 public class Principal {
     public static void main(String[] args) {
@@ -29,6 +30,17 @@ public class Principal {
         Quioscos quiosco4 = new Quioscos("Don Pedro", "habitat_acuatico2");
         Quioscos quiosco5 = new Quioscos("Doña Juana", "habitat_aviario1");
         Quioscos quiosco6 = new Quioscos("Don Jose", "habitat_aviario2");
+
+        Medicinas medicina1 = new Medicinas("Paracetamol", 100, "2045-12-02");
+        Medicinas medicina2 = new Medicinas ("Calmante", 450, "2028-10-12");
+        Equipamiento eq1= new Equipamiento ("Cuerdas", 500, true);
+        Equipamiento eq2= new Equipamiento ("Arneses", 250, false);
+        Alimentos a1= new Alimentos ("Carne", 100, "carnivoro");
+        Alimentos a2= new Alimentos ("Heno", 200, "herbivoro");
+
+        Proovedor medicinas = new Proovedor ("Julian", "Medicinas", 673578121);
+        Proovedor equipamiento = new Proovedor ("Maria", "Equipamiento", 621090238);
+        Proovedor alimentos = new Proovedor ("Pedro", "Alimentos", 608571218);
 
         System.out.println("Bienvenido al zoologico");
         System.out.println("Introduzca su nombre");
@@ -162,5 +174,53 @@ public class Principal {
         }while (opcion != 0);        
             }
 
+            public void relacionadoConInventario (){
+                System.out.println(imprimirInventario());
+                if (listaMedicinas.size() < 10){
+                    System.out.println("Se necesitan mas medicinas");
+                    System.out.println("El proovedor de medicinas es: " + medicinas.getNombre());
+                    System.out.println("El telefono del proovedor es: " + medicinas.getTelefono());
+                    agregarMedicinas(medicina1, medicinas);
+                    agregarMedicinas(medicina2, medicinas);
+                }else{
+                    if(listaMedicinas.size() == 0){
+                        System.out.println("No hay medicinas");
+                        agregarMedicinas(medicina1, medicinas);
+                        agregarMedicinas(medicina2, medicinas);
+                    }else{
+                        System.out.println("Hay suficientes medicinas");
+                    }
+                }
 
-        }
+                if (listaEquipamiento.size() < 10){
+                    System.out.println("Se necesitan mas equipamiento");
+                    System.out.println("El proovedor de equipamiento es: " + equipamiento.getNombre());
+                    System.out.println("El telefono del proovedor es: " + equipamiento.getTelefono());
+                    agregarEquipamiento(eq1, equipamiento);
+                    agregarEquipamiento(eq2, equipamiento);
+            } else{
+                if(listaMedicinas.size() == 0){
+                    System.out.println("No hay medicinas");
+                    agregarEquipamiento(eq1, equipamiento);
+                    agregarEquipamiento(eq2, equipamiento);
+                }else{
+                    System.out.println("Hay suficiente equipamiento");
+                }
+            }
+            if (listaAlimentos.size() < 10){
+                System.out.println("Se necesitan mas alimentos");
+                System.out.println("El proovedor de alimentos es: " + alimentos.getNombre());
+                System.out.println("El telefono del proovedor es: " + alimentos.getTelefono());
+                agregarAlimentos(a1, alimentos);
+                agregarAlimentos(a2, alimentos);
+        } else{
+            if(listaAlimentos.size() == 0){
+                System.out.println("No hay alimentos");
+                agregarAlimentos(a1, alimentos);
+                agregarAlimentos(a2, alimentos);
+            }else{
+                System.out.println("Hay suficientes alimentos");
+            }
+    }
+}
+}
