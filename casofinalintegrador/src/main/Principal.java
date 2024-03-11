@@ -42,6 +42,9 @@ public class Principal {
         Proovedor equipamiento = new Proovedor ("Maria", "Equipamiento", 621090238);
         Proovedor alimentos = new Proovedor ("Pedro", "Alimentos", 608571218);
 
+        Mantenimiento mantenimiento1 = new Mantenimiento("Urgente", "Jaula tigre");
+        Mantenimiento mantenimiento2 = new Mantenimiento("Regular", "Hípica");
+
         System.out.println("Bienvenido al zoologico");
         System.out.println("Introduzca su nombre");
         nombre = buffer.readLine();
@@ -223,4 +226,8 @@ public class Principal {
             }
     }
 }
+public static void revisiones (){
+    
+}
+
 }
